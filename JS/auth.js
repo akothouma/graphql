@@ -34,9 +34,3 @@ export const doLogin = async () => {
         return
     }
 }
-
-export const doLogOut = async () => {
-    localStorage.removeItem('token')
-    //redirect to login window.location.href="/login"
-
-}
