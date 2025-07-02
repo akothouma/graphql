@@ -1,4 +1,4 @@
-const displayError=(errrorDetail,errorCode)=>{
+export const displayError=(errrorDetail,errorCode)=>{
  const errorMessage={
     status:"error",
     message:errrorDetail || "an unknown error occured.be patient as we are looking into it",
