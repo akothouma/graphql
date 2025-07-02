@@ -1,7 +1,7 @@
-import { email, password } from "./elements.js"
+import { Elements} from "./elements.js"
 import { displayError } from "./error.js";
 import { Endpoints } from "./constants.js"
-
+const{email, password }=Elements();
 
 export const doLogin = async () => {
     try {
@@ -12,7 +12,7 @@ export const doLogin = async () => {
         const response = await fetch(Endpoints.SIGNIN_ENDPOINT, {
             method: "POST",
             headers: {
-                'Authorization': `Basic${btoa(`${email}:${password}`)}`,
+                Authorization: `Basic ${btoa(`${email}:${password}`)}`,
                 'Content-Type': 'application/json'
             },
         })
