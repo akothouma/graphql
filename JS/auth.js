@@ -1,10 +1,11 @@
 import { Elements} from "./elements.js"
 import { displayError } from "./error.js";
 import { Endpoints } from "./constants.js"
-const{email, password }=Elements();
-
+import { showDashboard } from "./index.js";
 export const doLogin = async () => {
     try {
+        const{email, password,error }=Elements();
+        error.innerHTML="";
         if (!email || !password) {
             displayError("All fields are required", 400)
             return
@@ -18,9 +19,11 @@ export const doLogin = async () => {
         })
 
         if (response.ok) {
+            showDashboard();
             const jwt = await response.json();
             console.log(jwt);
             localStorage.setItem('token', jwt);
+            
         } else {
             if (email.includes('@')) {
                 displayError("Email or password is incorrect", response.status);
