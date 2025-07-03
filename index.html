@@ -6,14 +6,15 @@
     <title>DashBoard</title>
 </head>
 <body>
-    <div id="login">
+    <div id="loginPage">
         <input type="text" id="email/userName" placeholder="Email/Username">
         <input type="password" id="password" placeholder="Password">
-        <button id="login" onclick="doLogin()">Log out</button>
+        <button id="login" type="submit">Log In</button>
+        <p id="errorDisplay"></p>
     </div>
     <div id="pageLayout" hidden>
-        <button id="logout" onclick="doLogout()">Log out</button>
+        <button id="logout" type="submit">Log out</button>
     </div>
-
+<script type="module" src="./JS/index.js"></script>
 </body>
 </html>
