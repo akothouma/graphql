@@ -1,5 +1,5 @@
 export const Elements = () => {
-    const emailElement = document.getElementById("email/username");
+    const emailElement = document.getElementById("email/userName");
     const passwordElement = document.getElementById("password");
     const dashboard = document.getElementById("pageLayout");
     const loginPage= document.getElementById("loginPage")
