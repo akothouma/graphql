@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     })
       loginButton.addEventListener('click', () => {
-        doLogin;    
+        doLogin();    
     })
 
 });
@@ -29,3 +29,5 @@ function showLogin() {
     dashboard.hidden = true;
     loginPage.hidden = false;
 }
+
+export{showDashboard}
