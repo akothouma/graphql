@@ -11,7 +11,7 @@ export const Endpoints={
     campus
     country:attrs(path:"country")
     gender:attrs(path:"gender")
-    createdAt
+    updatedAt
     auditRatio
     modulexps:xps(where: {originEventId: {_eq: 75}}) {
       path
