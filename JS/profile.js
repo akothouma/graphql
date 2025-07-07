@@ -28,6 +28,7 @@ export const updateUI = (graphqlData) => {
         jsXpsDOM,
         uxXpsDOM,
         uiXpsDOM,
+        OverallXPDOM
     } = Elements();
     
     const modulexps = accumulateXps(user[0].modulexps);
@@ -57,7 +58,7 @@ export const updateUI = (graphqlData) => {
         .aggregate.sum.grade;
     piscineUXGradeDOM.textContent = user[0].piscineUXgrades
         .aggregate.sum.grade;
-
+    OverallXPDOM.textContent=user[0].xp.aggregate.sum.amount;
     modulexpsDOM.textContent = modulexps;
     goXpsDom.textContent = goxps;
     jsXpsDOM.textContent = jsxps;
@@ -70,22 +71,3 @@ function accumulateXps(array) {
     return result
 }
 
-function populateXPData(containerId, xpArray) {
-    const container = document.getElementById(containerId);
-    container.innerHTML = '';
-
-    if (xpArray && xpArray.length > 0) {
-        xpArray.forEach(xp => {
-            const xpElement = document.createElement('div');
-            xpElement.innerHTML = `
-                        <div style="display: flex; justify-content: space-between; margin: 0.25rem 0;">
-                            <span>${xp.path}</span>
-                            <strong>${xp.amount} XP</strong>
-                        </div>
-                    `;
-            container.appendChild(xpElement);
-        });
-    } else {
-        container.innerHTML = '<div>No XP data available</div>';
-    }
-}
