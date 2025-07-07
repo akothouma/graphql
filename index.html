@@ -99,8 +99,8 @@
             <div class="card">
                 <h3>Total XP Summary</h3>
                 <div class="stat-box">
-                    <div class="stat-number" id="total-xp">0</div>
                     <div class="stat-label">Total XP Amount</div>
+                    <div class="stat-number" id="total-xp">0</div>
                 </div>
             </div>
 
@@ -109,12 +109,12 @@
                 <h3>Audit Statistics</h3>
                 <div class="audit-stats">
                     <div class="stat-box">
-                        <div class="stat-number" id="audits-done">0</div>
                         <div class="stat-label">Audits Done</div>
+                        <div class="stat-number" id="audits-done">0</div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-number" id="audits-received">0</div>
                         <div class="stat-label">Audits Received</div>
+                        <div class="stat-number" id="audits-received">0</div>
                     </div>
                     <div class="info-item">
                     <span class="label">Audit Ratio:</span>
@@ -153,31 +153,15 @@
 
         <!-- Transactions Section -->
         <div class="card">
-            <h3>Transaction History</h3>
-            <div id="transactions-list">
-                <!-- Transaction items will be populated here -->
-                <div class="transaction-item">
-                    <h4>Transaction Details</h4>
-                    <div class="progress-info">
-                        <div>
-                            <span class="label">Grade:</span>
-                            <span class="value" id="transaction-grade">-</span>
-                        </div>
-                        <div>
-                            <span class="label">Created:</span>
-                            <span class="value" id="transaction-created">-</span>
-                        </div>
-                        <div>
-                            <span class="label">Updated:</span>
-                            <span class="value" id="transaction-updated">-</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h3>Grade Progress Graph</h3>
+            <div id="progress-graph"></div>
+            <h3> Module Project's XP Graph</h3>
+            <div id="module-xp-chart"></div>
         </div>
     </div>
         <button id="logout" type="submit">Log out</button>
     </div>
 <script type="module" src="./JS/index.js"></script>
+<script type="module" src="https://d3js.org/d3.v7.min.js"></script>
 </body>
 </html>
