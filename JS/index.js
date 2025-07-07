@@ -1,7 +1,7 @@
 import {Elements} from "./elements.js"
 import { doLogin } from "./auth.js";
 import { queryApi } from "./query.js";
-const{ loginButton, dashboard, logoutButton }=Elements();
+const{ loginButton, dashboard, logoutButton,error }=Elements();
 
 document.addEventListener('DOMContentLoaded', function () {
     const token = localStorage.getItem('token');
@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
     logoutButton.addEventListener('click', () => {
         localStorage.removeItem('token');
         showLogin();
-    
     })
       loginButton.addEventListener('click', () => {
         doLogin();    
@@ -28,8 +27,9 @@ function showDashboard() {
 }
 
 function showLogin() {
+    error.innerHTML="";
     dashboard.hidden = true;
     loginPage.hidden = false;
 }
 
-export{showDashboard}
+export{showDashboard,showLogin}
