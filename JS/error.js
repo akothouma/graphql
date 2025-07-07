@@ -6,8 +6,10 @@ export const displayError=(errrorDetail,errorCode)=>{
     code:errorCode||500
  };
 const{error}=Elements();
-error.innerHTML="";
 error.textContent=errorMessage.message;
- console.log("Error:",errorMessage)
- return JSON.stringify({errorMessage})
+error.style.color="red";
+
+setTimeout(()=>{
+   error.innerHTML=""
+},2500)
 }
