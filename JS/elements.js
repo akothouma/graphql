@@ -28,6 +28,7 @@ export const Elements=()=>{
      jsXpsDOM:document.getElementById('piscine-js-xps'),
      uxXpsDOM: document.getElementById('piscine-ux-xps'),
      uiXpsDOM:document.getElementById('piscine-ui-xps'),
+     OverallXPDOM:document.getElementById('total-xp')
   
             }
     // return {
