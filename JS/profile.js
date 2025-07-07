@@ -1,6 +1,8 @@
 import { Elements } from "./elements.js"
+import {createProgressGraph} from "./progress.js"
+import {createModuleXpBarChart} from "./projects.js"
 export const updateUI = (graphqlData) => {
-    const { user, transaction } = graphqlData
+    const { user, transaction } = graphqlData;
     const { logoutButton,
         dashboard,
         loginButton,
@@ -27,7 +29,14 @@ export const updateUI = (graphqlData) => {
         uxXpsDOM,
         uiXpsDOM,
     } = Elements();
-
+    
+    const modulexps = accumulateXps(user[0].modulexps);
+    const goxps = accumulateXps(user[0].piscineGOxps);
+    const jsxps = accumulateXps(user[0].piscineJSxps);
+    const uixps = accumulateXps(user[0].piscineUIxps);
+    const uxxps = accumulateXps(user[0].piscineUXxps);
+    createProgressGraph("progress-graph",transaction);
+    createModuleXpBarChart('module-xp-chart', user[0].modulexps);
     userNameDOM.textContent = user[0].login;
     firstNameDOM.textContent = user[0].firstName;
     lastNameDOM.textContent = user[0].lastName;
@@ -49,11 +58,6 @@ export const updateUI = (graphqlData) => {
     piscineUXGradeDOM.textContent = user[0].piscineUXgrades
         .aggregate.sum.grade;
 
-    const modulexps = accumulateXps(user[0].modulexps);
-    const goxps = accumulateXps(user[0].piscineGOxps);
-    const jsxps = accumulateXps(user[0].piscineJSxps);
-    const uixps = accumulateXps(user[0].piscineUIxps);
-    const uxxps = accumulateXps(user[0].piscineUXxps);
     modulexpsDOM.textContent = modulexps;
     goXpsDom.textContent = goxps;
     jsXpsDOM.textContent = jsxps;
@@ -65,7 +69,6 @@ function accumulateXps(array) {
     const result = array.reduce((acc, curr) => acc + curr.amount,0)
     return result
 }
-
 
 function populateXPData(containerId, xpArray) {
     const container = document.getElementById(containerId);
