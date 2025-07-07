@@ -1,5 +1,6 @@
 import {Elements} from "./elements.js"
 import { doLogin } from "./auth.js";
+import { queryApi } from "./query.js";
 const{ loginButton, dashboard, logoutButton }=Elements();
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function showDashboard() {
+    queryApi();
     loginPage.hidden = true;
     dashboard.hidden = false;
 }

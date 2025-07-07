@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DashBoard</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
 </head>
+
 <body>
     <div id="loginPage">
         <input type="text" id="email/userName" placeholder="Email/Username">
@@ -13,6 +15,164 @@
         <p id="errorDisplay"></p>
     </div>
     <div id="pageLayout" hidden>
+        <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 id="user-name">User Profile Dashboard</h1>
+        </header>
+
+        <div class="profile-grid">
+            <!-- Basic Information Card -->
+            <div class="card">
+                <h3>Basic Information</h3>
+                <div class="info-item">
+                    <span class="label">User Name:</span>
+                    <span class="value" id="user-login">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">First Name:</span>
+                    <span class="value" id="first-name">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Last Name:</span>
+                    <span class="value" id="last-name">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Email:</span>
+                    <span class="value" id="email">-</span>
+                </div>
+                 <div class="info-item">
+                    <span class="label">Gender:</span>
+                    <span class="value" id="gender">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Campus:</span>
+                    <span class="value" id="campus">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Country:</span>
+                    <span class="value" id="country">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Joined on:</span>
+                    <span class="value" id="created-at">-</span>
+                </div>
+                
+            </div>
+
+            <!-- XP Information Card -->
+            <div class="card">
+                <h3>Experience Points (XP in KB's)</h3>
+                <div class="xp-grid">
+                    <div class="xp-item">
+                        <h4>Module XPs</h4>
+                        <div id="module-xps">
+                        </div>
+                    </div>
+                    <div class="xp-item">
+                        <h4>Piscine GO XPs</h4>
+                        <div id="piscine-go-xps">
+                        </div>
+                    </div>
+                    <div class="xp-item">
+                        <h4>Piscine JS XPs</h4>
+                        <div id="piscine-js-xps">
+                        </div>
+                    </div>
+                    <div class="xp-item">
+                        <h4>Piscine UX XPs</h4>
+                        <div id="piscine-ux-xps">
+                        </div>
+                    </div>
+                    <div class="xp-item">
+                        <h4>Piscine UI XPs</h4>
+                        <div id="piscine-ui-xps">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total XP Card -->
+            <div class="card">
+                <h3>Total XP Summary(KB's)</h3>
+                <div class="stat-box">
+                    <div class="stat-number" id="total-xp">0</div>
+                    <div class="stat-label">Total XP Amount</div>
+                </div>
+            </div>
+
+            <!-- Audit Statistics Card -->
+            <div class="card">
+                <h3>Audit Statistics</h3>
+                <div class="audit-stats">
+                    <div class="stat-box">
+                        <div class="stat-number" id="audits-done">0</div>
+                        <div class="stat-label">Audits Done</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number" id="audits-received">0</div>
+                        <div class="stat-label">Audits Received</div>
+                    </div>
+                    <div class="info-item">
+                    <span class="label">Audit Ratio:</span>
+                    <span class="value" id="audit-ratio">-</span>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grades Section -->
+        <div class="card">
+            <h3>Grades Summary</h3>
+            <div class="xp-grid">
+                <div class="grade-item">
+                    <h4>Module Grades</h4>
+                    <div class="stat-number" id="module-grades">0</div>
+                </div>
+                <div class="grade-item">
+                    <h4>Piscine GO Grades</h4>
+                    <div class="stat-number" id="piscine-go-grades">0</div>
+                </div>
+                <div class="grade-item">
+                    <h4>Piscine JS Grades</h4>
+                    <div class="stat-number" id="piscine-js-grades">0</div>
+                </div>
+                <div class="grade-item">
+                    <h4>Piscine UX Grades</h4>
+                    <div class="stat-number" id="piscine-ux-grades">0</div>
+                </div>
+                <div class="grade-item">
+                    <h4>Piscine UI Grades</h4>
+                    <div class="stat-number" id="piscine-ui-grades">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Graph Section -->
+        <div class="card">
+            <h3>Transaction History</h3>
+            <div id="transactions-list">
+                <!-- Transaction items will be populated here -->
+                <div class="transaction-item">
+                    <h4>Transaction Details</h4>
+                    <div class="progress-info">
+                        <div>
+                            <span class="label">Grade:</span>
+                            <span class="value" id="transaction-grade">-</span>
+                        </div>
+                        <div>
+                            <span class="label">Created:</span>
+                            <span class="value" id="transaction-created">-</span>
+                        </div>
+                        <div>
+                            <span class="label">Updated:</span>
+                            <span class="value" id="transaction-updated">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
         <button id="logout" type="submit">Log out</button>
     </div>
 <script type="module" src="./JS/index.js"></script>
