@@ -5,8 +5,8 @@ import { showDashboard } from "./index.js";
 export const doLogin = async () => {
     try {
         const { emailElement, passwordElement, error } = Elements();
-        email = emailElement ? emailElement.value.trim() : "";
-        password = passwordElement ? passwordElement.value.trim() : "";
+        const email = emailElement ? emailElement.value.trim() : "";
+        const password = passwordElement ? passwordElement.value.trim() : "";
         error.innerHTML = "";
         if (!email || !password) {
             displayError("All fields are required", 400)
@@ -23,7 +23,6 @@ export const doLogin = async () => {
         if (response.ok) {
             showDashboard();
             const jwt = await response.json();
-            console.log(jwt);
             localStorage.setItem('token', jwt);
 
         } else {
