@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DashBoard</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
 </head>
+
 <body>
     <div id="loginPage">
         <input type="text" id="email/userName" placeholder="Email/Username">
@@ -60,36 +62,31 @@
 
             <!-- XP Information Card -->
             <div class="card">
-                <h3>Experience Points (XP)</h3>
+                <h3>Experience Points (XP in KB's)</h3>
                 <div class="xp-grid">
                     <div class="xp-item">
                         <h4>Module XPs</h4>
                         <div id="module-xps">
-                            <!-- Module XP items will be populated here -->
                         </div>
                     </div>
                     <div class="xp-item">
                         <h4>Piscine GO XPs</h4>
                         <div id="piscine-go-xps">
-                            <!-- Piscine GO XP items will be populated here -->
                         </div>
                     </div>
                     <div class="xp-item">
                         <h4>Piscine JS XPs</h4>
                         <div id="piscine-js-xps">
-                            <!-- Piscine JS XP items will be populated here -->
                         </div>
                     </div>
                     <div class="xp-item">
                         <h4>Piscine UX XPs</h4>
                         <div id="piscine-ux-xps">
-                            <!-- Piscine UX XP items will be populated here -->
                         </div>
                     </div>
                     <div class="xp-item">
                         <h4>Piscine UI XPs</h4>
                         <div id="piscine-ui-xps">
-                            <!-- Piscine UI XP items will be populated here -->
                         </div>
                     </div>
                 </div>
@@ -97,7 +94,7 @@
 
             <!-- Total XP Card -->
             <div class="card">
-                <h3>Total XP Summary</h3>
+                <h3>Total XP Summary(KB's)</h3>
                 <div class="stat-box">
                     <div class="stat-number" id="total-xp">0</div>
                     <div class="stat-label">Total XP Amount</div>
@@ -151,7 +148,7 @@
             </div>
         </div>
 
-        <!-- Transactions Section -->
+        <!-- Graph Section -->
         <div class="card">
             <h3>Transaction History</h3>
             <div id="transactions-list">

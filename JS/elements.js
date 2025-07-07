@@ -30,28 +30,5 @@ export const Elements=()=>{
      uiXpsDOM:document.getElementById('piscine-ui-xps'),
   
             }
-    // return {
-    //     email: emailElement ? emailElement.value.trim() : "",
-    //     password: passwordElement ? passwordElement.value.trim() : "",
-    //     logoutButton,
-    //     dashboard,
-    //     loginButton,
-    //     loginPage,
-    //     error,
-    //     userNameDOM,
-    //     firstNameDOM,
-    //     lastNameDOM,
-    //     campusDOM,
-    //     countryDOM,
-    //     genderDOM,joinDateDOM,
-    //     auditRatioDOM,
-    //     emailDOM,
-    //     AuditDoneDOM,
-    //     AuditReceivedDOM,
-    //     moduleGradeDOM,
-    //     piscineGoGradeDOM,
-    //     piscineJSGradeDOM,
-    //     piscineUIGradeDOM,
-    //     piscineUXGradeDOM
-    // }
+
 }
