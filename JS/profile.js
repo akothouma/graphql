@@ -69,7 +69,7 @@ export const updateUI = (graphqlData) => {
 }
 function accumulateXps(array) {
     const result = array.reduce((acc, curr) => acc + curr.amount,0)
-    return toKB(result).toFixed(2);
+    return result;
 }
 
 function toKB(value) {
