@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,157 +9,162 @@
 </head>
 
 <body>
-    <div id="loginPage">
-        <input type="text" id="email/userName" placeholder="Email/Username">
-        <input type="password" id="password" placeholder="Password">
-        <button id="login" type="submit">Log In</button>
+    <div id="loginPage" >
         <p id="errorDisplay"></p>
+        <div> <input type="text" id="email/userName" placeholder="Email/Username"></div>
+        <div><input type="password" id="password" placeholder="Password"></div>
+        <div> <button id="login" type="submit">Log In</button></div>
     </div>
     <div id="pageLayout" hidden>
         <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <h1 id="user-name">User Profile Dashboard</h1>
-        </header>
+            <!-- Header Section -->
+            <header class="header">
+                <h1 id="user-name">User Profile Dashboard</h1>
 
-        <div class="profile-grid">
-            <!-- Basic Information Card -->
-            <div class="card">
-                <h3>Basic Information</h3>
-                <div class="info-item">
-                    <span class="label">User Name:</span>
-                    <span class="value" id="user-login">-</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">First Name:</span>
-                    <span class="value" id="first-name">-</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">Last Name:</span>
-                    <span class="value" id="last-name">-</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">Email:</span>
-                    <span class="value" id="email">-</span>
-                </div>
-                 <div class="info-item">
-                    <span class="label">Gender:</span>
-                    <span class="value" id="gender">-</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">Campus:</span>
-                    <span class="value" id="campus">-</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">Country:</span>
-                    <span class="value" id="country">-</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">Joined on:</span>
-                    <span class="value" id="created-at">-</span>
-                </div>
-                
-            </div>
+                <span class="label">@</span>
+                <span class="value" id="user-login">-</span>
 
-            <!-- XP Information Card -->
-            <div class="card">
-                <h3>Experience Points (XP in KB's)</h3>
-                <div class="xp-grid">
-                    <div class="xp-item">
-                        <h4>Module XPs</h4>
-                        <div id="module-xps">
-                        </div>
-                    </div>
-                    <div class="xp-item">
-                        <h4>Piscine GO XPs</h4>
-                        <div id="piscine-go-xps">
-                        </div>
-                    </div>
-                    <div class="xp-item">
-                        <h4>Piscine JS XPs</h4>
-                        <div id="piscine-js-xps">
-                        </div>
-                    </div>
-                    <div class="xp-item">
-                        <h4>Piscine UX XPs</h4>
-                        <div id="piscine-ux-xps">
-                        </div>
-                    </div>
-                    <div class="xp-item">
-                        <h4>Piscine UI XPs</h4>
-                        <div id="piscine-ui-xps">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </header>
 
-            <!-- Total XP Card -->
-            <div class="card">
-                <h3>Total XP Summary(KB's)</h3>
-                <div class="stat-box">
-                    <div class="stat-label">Total XP Amount</div>
-                    <div class="stat-number" id="total-xp">0</div>
-                </div>
-            </div>
+            <div class="profile-grid">
+                <!-- Basic Information Card -->
+                <div class="card">
+                    <h3>Basic Information</h3>
 
-            <!-- Audit Statistics Card -->
-            <div class="card">
-                <h3>Audit Statistics</h3>
-                <div class="audit-stats">
-                    <div class="stat-box">
-                        <div class="stat-label">Audits Done</div>
-                        <div class="stat-number" id="audits-done">0</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-label">Audits Received</div>
-                        <div class="stat-number" id="audits-received">0</div>
+                    <div class="info-item">
+                        <span class="label">First Name:</span>
+                        <span class="value" id="first-name">-</span>
                     </div>
                     <div class="info-item">
-                    <span class="label">Audit Ratio:</span>
-                    <span class="value" id="audit-ratio">-</span>
+                        <span class="label">Last Name:</span>
+                        <span class="value" id="last-name">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Email:</span>
+                        <span class="value" id="email">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Gender:</span>
+                        <span class="value" id="gender">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Campus:</span>
+                        <span class="value" id="campus">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Country:</span>
+                        <span class="value" id="country">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Joined on:</span>
+                        <span class="value" id="created-at">-</span>
+                    </div>
+
                 </div>
+
+                <!-- XP Information Card -->
+                <div class="card">
+                    <h3>Experience Points (XP in KB's)</h3>
+                    <div class="xp-grid">
+                        <div class="xp-item">
+                            <h4>Module XPs</h4>
+                            <div id="module-xps">
+                            </div>
+                        </div>
+                        <div class="xp-item">
+                            <h4>Piscine GO XPs</h4>
+                            <div id="piscine-go-xps">
+                            </div>
+                        </div>
+                        <div class="xp-item">
+                            <h4>Piscine JS XPs</h4>
+                            <div id="piscine-js-xps">
+                            </div>
+                        </div>
+                        <div class="xp-item">
+                            <h4>Piscine UX XPs</h4>
+                            <div id="piscine-ux-xps">
+                            </div>
+                        </div>
+                        <div class="xp-item">
+                            <h4>Piscine UI XPs</h4>
+                            <div id="piscine-ui-xps">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Total XP Card -->
+                <div class="card">
+                    <h3>Total XP Summary(KB's)</h3>
+                    <div class="stat-box">
+                        <div class="stat-label">Total XP Amount</div>
+                        <div class="stat-number" id="total-xp">0</div>
+                    </div>
+                    <!-- Audit Statistics Card -->
+                    <div class="card" style="margin-top: 40px;">
+                        <h3>Audit Statistics</h3>
+                        <div class="audit-stats">
+                            <div class="stat-box">
+                                <div class="stat-label">Audits Done</div>
+                                <div class="stat-number" id="audits-done">0</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-label">Audits Received</div>
+                                <div class="stat-number" id="audits-received">0</div>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Audit Ratio:</span>
+                                <span class="value" id="audit-ratio">-</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Grades Section -->
-        <div class="card">
-            <h3>Grades Summary</h3>
-            <div class="xp-grid">
-                <div class="grade-item">
-                    <h4>Module Grades</h4>
-                    <div class="stat-number" id="module-grades">0</div>
-                </div>
-                <div class="grade-item">
-                    <h4>Piscine GO Grades</h4>
-                    <div class="stat-number" id="piscine-go-grades">0</div>
-                </div>
-                <div class="grade-item">
-                    <h4>Piscine JS Grades</h4>
-                    <div class="stat-number" id="piscine-js-grades">0</div>
-                </div>
-                <div class="grade-item">
-                    <h4>Piscine UX Grades</h4>
-                    <div class="stat-number" id="piscine-ux-grades">0</div>
-                </div>
-                <div class="grade-item">
-                    <h4>Piscine UI Grades</h4>
-                    <div class="stat-number" id="piscine-ui-grades">0</div>
+
+
+            <!-- Grades Section -->
+            <div class="card">
+                <h3>Grades Summary</h3>
+                <div class="xp-grid">
+                    <div class="grade-item">
+                        <h4>Module Grades</h4>
+                        <div class="stat-number" id="module-grades">0</div>
+                    </div>
+                    <div class="grade-item">
+                        <h4>Piscine GO Grades</h4>
+                        <div class="stat-number" id="piscine-go-grades">0</div>
+                    </div>
+                    <div class="grade-item">
+                        <h4>Piscine JS Grades</h4>
+                        <div class="stat-number" id="piscine-js-grades">0</div>
+                    </div>
+                    <div class="grade-item">
+                        <h4>Piscine UX Grades</h4>
+                        <div class="stat-number" id="piscine-ux-grades">0</div>
+                    </div>
+                    <div class="grade-item">
+                        <h4>Piscine UI Grades</h4>
+                        <div class="stat-number" id="piscine-ui-grades">0</div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Graph Section -->
-        <div class="card">
-            <h3>Grade Progress Graph</h3>
-            <div id="progress-graph"></div>
-            <h3> Module Project's XP Graph</h3>
-            <div id="module-xp-chart"></div>
+            <!-- Graph Section -->
+            <div class="card" style="margin-top: 40px;">
+                <h3>Grade Progress Graph</h3>
+                <div id="progress-graph"></div>
+                <h3> Module Project's XP Graph</h3>
+                <div id="module-xp-chart"></div>
+            </div>
+        </div>
+        <div class="xp-grid">
+            <button id="logout" type="button">Log out</button>
         </div>
     </div>
-        <button id="logout" type="submit">Log out</button>
-    </div>
-<script type="module" src="./JS/index.js"></script>
-<script type="module" src="https://d3js.org/d3.v7.min.js"></script>
+    <script type="module" src="./JS/index.js"></script>
+    <script type="module" src="https://d3js.org/d3.v7.min.js"></script>
 </body>
+
 </html>
