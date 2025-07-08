@@ -2,6 +2,7 @@ import { Elements } from "./elements.js"
 import { displayError } from "./error.js";
 import { Endpoints } from "./constants.js"
 import { showDashboard } from "./index.js";
+import { queryApi } from "./query.js";
 export const doLogin = async () => {
     try {
         const { emailElement, passwordElement, error } = Elements();
@@ -21,9 +22,10 @@ export const doLogin = async () => {
         })
 
         if (response.ok) {
-            showDashboard();
             const jwt = await response.json();
             localStorage.setItem('token', jwt);
+            queryApi();
+            showDashboard();
 
         } else {
             if (email.includes('@')) {
