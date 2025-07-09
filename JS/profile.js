@@ -1,4 +1,6 @@
 import { Elements } from "./elements.js"
+import {createProgressGraph} from "./progress.js"
+import {createModuleXpBarChart} from "./projects.js"
 export const updateUI = (graphqlData) => {
     const { user, transaction } = graphqlData;
     const { 
@@ -22,6 +24,7 @@ export const updateUI = (graphqlData) => {
         jsXpsDOM,
         uxXpsDOM,
         uiXpsDOM,
+        OverallXPDOM
     } = Elements();
     
     
@@ -66,7 +69,7 @@ export const updateUI = (graphqlData) => {
 }
 function accumulateXps(array) {
     const result = array.reduce((acc, curr) => acc + curr.amount,0)
-    return toKB(result).toFixed(2);
+    return result;
 }
 
 function toKB(value) {
