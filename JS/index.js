@@ -19,16 +19,17 @@ document.addEventListener('DOMContentLoaded', function () {
     
 });
 
-function showDashboard() { 
+function showDashboard() {
     queryApi();
-    dashboard.hidden = false;
-    loginPage.hidden = true;
+    dashboard.classList.remove("hidden"); 
+    loginPage.classList.add("hidden");    
 }
 
 function showLogin() {
-    dashboard.hidden = true;
-    loginPage.hidden = false;
     localStorage.removeItem('token');
+    dashboard.classList.add("hidden");   
+        loginPage.classList.remove("hidden"); 
+        errorDisplay.textContent = ''; 
 }
 
 export{showDashboard,showLogin}
