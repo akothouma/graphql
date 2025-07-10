@@ -9,13 +9,14 @@
 </head>
 
 <body>
-    <div id="loginPage" >
+    <div id="loginPage">
+        <h2>Enter credentials to access dashboard </h2>
         <p id="errorDisplay"></p>
         <div> <input type="text" id="email/userName" placeholder="Email/Username"></div>
         <div><input type="password" id="password" placeholder="Password"></div>
         <div> <button id="login" type="submit">Log In</button></div>
     </div>
-    <div id="pageLayout" hidden>
+    <div id="pageLayout">
         <div class="container">
             <!-- Header Section -->
             <header class="header">
@@ -150,21 +151,20 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Graph Section -->
+<!-- graphs section -->
             <div class="card" style="margin-top: 40px;">
                 <h3>Grade Progress Graph</h3>
                 <div id="progress-graph"></div>
-                <h3> Module Project's XP Graph</h3>
+                <h3>Module Project's XP Graph</h3>
                 <div id="module-xp-chart"></div>
+                <!-- Centered Logout Button -->
+                <div class="logout-container">
+                    <button id="logout" type="button">Log out</button>
+                </div>
             </div>
         </div>
-        <div class="xp-grid">
-            <button id="logout" type="button">Log out</button>
-        </div>
-    </div>
-    <script type="module" src="./JS/index.js"></script>
-    <script type="module" src="https://d3js.org/d3.v7.min.js"></script>
+        <script type="module" src="./JS/index.js"></script>
+        <script type="module" src="https://d3js.org/d3.v7.min.js"></script>
 </body>
 
 </html>
